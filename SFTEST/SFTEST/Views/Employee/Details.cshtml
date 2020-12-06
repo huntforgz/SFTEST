@@ -1,0 +1,72 @@
+﻿@model SFTEST.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HiredDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HiredDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tasks)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Task Name</th>
+                    <th>Start Time</th>
+                    <th>Deadline</th>
+                </tr>
+                @if (Model.Tasks != null)
+                {
+                    foreach (var item in Model.Tasks)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TaskName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StartTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Deadline)
+                        </td>
+                    </tr>
+                }
+                }
+
+            </table>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
