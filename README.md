@@ -3,7 +3,11 @@ A simple web page for employees management using ASP.NET MVC5 with .NET Framewor
 
 # Design
 
-### DOMAI
+### Domain
 * Employee
+- Name string length < 50
+- Date format YYYY-MM-DD
 * Task
+- Deadline date should be no less than current day
+- Dealline date should be no less than start time
 
