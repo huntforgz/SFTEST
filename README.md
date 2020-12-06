@@ -3,7 +3,7 @@ A simple web page for employees management using ASP.NET MVC5 with .NET Framewor
 
 # Design
 
-## DOMAI
-### Employee
-### Task
+### DOMAI
+* Employee
+* Task
 
