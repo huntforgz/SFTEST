@@ -17,12 +17,13 @@ A simple web page for employees management using ASP.NET MVC5 with .NET Framewor
  
 ### Controller
 * Employee
-  - Homepage(display for all employees),create, edit, delete
+  - Homepage(display for all employees),details, create, edit, delete
   - For add or delete employe tasks,using check box to select or remove
   
 * Task
-  - Homepage(display for all employees),create, edit, delete
+  - Homepage(display for all tasks),details, create, edit, delete
   - Add contraint for datetime type properties and corresponding error message if encounters invalidated value
   
 ### Unit Test
+* Using Moq,only test Employee controller(index,create,details)
 
